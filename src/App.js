@@ -112,10 +112,7 @@ function App() {
             {/* Public routes */}
             <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
             <Route path="/signup" element={<RegisterPage />} />
-
-            {/* User-Only Routes */}
-            <Route element={<UserPrivateRoute />}>
-              <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/shop" element={<StorePage addToCart={addToCart} />} />
               <Route path="/product/:id" element={<ProductDetailPage addToCart={addToCart} />} />
@@ -124,6 +121,9 @@ function App() {
               <Route path="/history" element={<OrderHistoryPage user={user} />} />
               <Route path="/aboutus" element={<AboutUsPage user={user} />} />
               <Route path="/contact" element={<ContactPage user={user} />} />
+            {/* User-Only Routes */}
+            <Route element={<UserPrivateRoute />}>
+             
             </Route>
 
             {/* Admin-Only Routes */}

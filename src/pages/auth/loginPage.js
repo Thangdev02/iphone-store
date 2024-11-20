@@ -71,32 +71,36 @@ const LoginPage = ({ onLogin }) => {
     setError(''); // Clear any previous errors
   
     try {
-      // Send API request to validate username and password
+      // Gửi yêu cầu GET đến API để kiểm tra tên người dùng và mật khẩu
       const response = await axios.get(`${ApiUrl}/users`, {
         params: { username, password },
+        headers: {
+          'Cache-Control': 'no-cache', // Vô hiệu hóa caching
+          'Pragma': 'no-cache', // Thêm tiêu đề Pragma để hỗ trợ trình duyệt cũ
+          'Expires': '0' // Đặt thời gian hết hạn yêu cầu về 0
+        }
       });
   
-      const users = response.data; // Assume response is an array of users
+      const users = response.data; // Dữ liệu trả về là danh sách người dùng
       console.log('Response from API:', users);
   
-      // Check if the user exists in the response
       if (Array.isArray(users) && users.length > 0) {
-        const user = users[0]; // Extract the first user from the response
+        const user = users[0]; // Chọn người dùng đầu tiên trong danh sách
   
         if (user && user.role) {
-          // Save user to cookies
+          // Lưu người dùng vào cookies
           Cookies.set('user', JSON.stringify(user), { expires: 7 });
   
-          // Call parent onLogin function
+          // Gọi hàm onLogin của parent
           onLogin(user);
   
-          // Navigate based on the user's role
+          // Điều hướng theo vai trò của người dùng
           navigate(user.role === 'admin' ? '/dashboard/products' : '/');
         } else {
-          setError('Invalid username or password'); // Handle invalid user
+          setError('Invalid username or password'); // Xử lý nếu không có vai trò người dùng
         }
       } else {
-        setError('Invalid username or password'); // Handle empty response
+        setError('Invalid username or password'); // Xử lý nếu không tìm thấy người dùng
       }
     } catch (err) {
       console.error('Error during login:', err);
@@ -104,6 +108,7 @@ const LoginPage = ({ onLogin }) => {
     }
   };
   
+
   
   
   return (
