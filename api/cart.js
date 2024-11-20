@@ -1,5 +1,5 @@
 // api/cart.js
-import data from '../../database.json';
+import data from '../database.json'; // Đọc dữ liệu từ file database.json
 
 export default function handler(req, res) {
     // Kiểm tra phương thức HTTP

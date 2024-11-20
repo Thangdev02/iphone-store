@@ -1,5 +1,5 @@
 // api/orders.js
-import data from '../../database.json';
+import data from '../database.json'; // Đọc dữ liệu từ file database.json
 
 
 
