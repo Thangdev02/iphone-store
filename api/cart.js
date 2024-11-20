@@ -2,5 +2,12 @@
 import data from '../../database.json';
 
 export default function handler(req, res) {
-  res.status(200).json(data.cart); // Trả về giỏ hàng
-}
+    // Kiểm tra phương thức HTTP
+    if (req.method === 'GET') {
+      // Trả về danh sách sản phẩm
+      res.status(200).json(data.cart); 
+    } else {
+      // Nếu không phải GET, trả về lỗi
+      res.status(405).json({ message: 'Method Not Allowed' });
+    }
+  }

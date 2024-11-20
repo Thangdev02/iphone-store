@@ -66,21 +66,12 @@ const LoginPage = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`${ApiUrl}/users`, {
-        params: { username, password },
-      });
-      const user = response.data.find(
-        (user) => user.username === username && user.password === password
-      );
-
+      const response = await axios.post(`${ApiUrl}/users`, { username, password });
+      const user = response.data;
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
         onLogin(user);
-        if (user.role === 'admin') {
-          navigate('/dashboard/products');
-        } else {
-          navigate('/');
-        }
+        navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {
         setError('Invalid username or password');
       }
@@ -88,7 +79,7 @@ const LoginPage = ({ onLogin }) => {
       setError('Error logging in');
     }
   };
-
+  
   return (
     <div className="login-page" style={styles.page}>
   <div className="login-box" style={styles.box}>
