@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Navbar, Nav, Container, Form, FormControl, Button, Badge } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaApple } from "react-icons/fa";
@@ -7,17 +7,13 @@ import './header.css';
 const Header = ({ user, onLogout, cart }) => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    onLogout();
-    navigate('/login');
-  };
+  
 
   const handleSearch = (e) => {
     e.preventDefault();
     navigate('/shop');
   };
 
-  const defaultAvatar = "https://cafefcdn.com/203337114487263232/2024/4/15/tim-cook-17131546935671543978626-1713163472868-1713163473337446631555.jpg";
 
   return (
     <Navbar style={{ position: 'sticky', top: '0', zIndex: '999', scrollBehavior: 'smooth' }} bg="light" expand="lg" className="border-bottom">

@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import LoginPage from './pages/auth/loginPage';
 import StorePage from './pages/store/storePage';
 import { ApiUrl } from './config';
@@ -23,10 +23,11 @@ import AboutUsPage from './pages/about/aboutUsPage';
 import ContactPage from './pages/contact/contactPage';
 import ProfilePage from './pages/profile/profilePage';
 import { UserProvider } from './context/UserContext';
+import Cookies from 'js-cookie';
 
 function App() {
   const [user, setUser] = useState(() => {
-    const storedUser = localStorage.getItem('user');
+    const storedUser = Cookies.get('user');
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
@@ -37,7 +38,7 @@ function App() {
 
   const handleLogin = (userData) => {
     setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData));
+    Cookies.set('user', JSON.stringify(userData), { expires: 7 }); // Store user data in cookies
     const storedCart = localStorage.getItem('cart');
     setCart(storedCart ? JSON.parse(storedCart) : []);
   };
@@ -45,7 +46,7 @@ function App() {
   const handleLogout = () => {
     setUser(null);
     setCart([]);
-    localStorage.removeItem('user');
+    Cookies.remove('user'); // Clear cookies
     localStorage.removeItem('cart');
   };
 
@@ -77,7 +78,7 @@ function App() {
 
   const placeOrder = (billingInfo) => {
     if (!user) {
-      alert("Please log in to place an order.");
+      alert('Please log in to place an order.');
       return;
     }
 
@@ -105,43 +106,43 @@ function App() {
 
   return (
     <UserProvider>
-    <BrowserRouter>
-      <MainLayout user={user} cart={cart} onLogout={handleLogout}>
-        <Routes>
-          {/* Public routes */}
-          <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-          <Route path="/signup" element={<RegisterPage />} />
+      <BrowserRouter>
+        <MainLayout user={user} cart={cart} onLogout={handleLogout}>
+          <Routes>
+            {/* Public routes */}
+            <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
+            <Route path="/signup" element={<RegisterPage />} />
 
-          {/* User-Only Routes */}
-          <Route element={<UserPrivateRoute user={user} />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/shop" element={<StorePage addToCart={addToCart} />} />
-            <Route path="/product/:id" element={<ProductDetailPage  addToCart={addToCart} />} />
-            <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
-            <Route path="/checkout" element={<CheckoutPage cart={cart} placeOrder={placeOrder} />} />
-            <Route path="/history" element={<OrderHistoryPage user={user} />} />
-            <Route path="/aboutus" element={<AboutUsPage user={user} />} />
-            <Route path="/contact" element={<ContactPage user={user} />} />
-          </Route>
-
-          {/* Admin-Only Routes with AdminLayout */}
-          <Route element={<AdminPrivateRoute user={user} />}>
-            <Route path="/dashboard" element={<AdminLayout />}>
-              <Route path="products" element={<ProductManagement />} />
-              <Route path="brands" element={<BrandManagement />} />
-              <Route path="orders" element={<OrderManagement />} />
+            {/* User-Only Routes */}
+            <Route element={<UserPrivateRoute />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/shop" element={<StorePage addToCart={addToCart} />} />
+              <Route path="/product/:id" element={<ProductDetailPage addToCart={addToCart} />} />
+              <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
+              <Route path="/checkout" element={<CheckoutPage cart={cart} placeOrder={placeOrder} />} />
+              <Route path="/history" element={<OrderHistoryPage user={user} />} />
+              <Route path="/aboutus" element={<AboutUsPage user={user} />} />
+              <Route path="/contact" element={<ContactPage user={user} />} />
             </Route>
-          </Route>
-        </Routes>
-      </MainLayout>
-    </BrowserRouter>
+
+            {/* Admin-Only Routes */}
+            <Route element={<AdminPrivateRoute />}>
+              <Route path="/dashboard" element={<AdminLayout />}>
+                <Route path="products" element={<ProductManagement />} />
+                <Route path="brands" element={<BrandManagement />} />
+                <Route path="orders" element={<OrderManagement />} />
+              </Route>
+            </Route>
+          </Routes>
+        </MainLayout>
+      </BrowserRouter>
     </UserProvider>
   );
 }
 
 function MainLayout({ children, user, cart, onLogout }) {
-  const { pathname } = useLocation(); // Safe to use inside MainLayout because it's a child of <BrowserRouter>
+  const { pathname } = useLocation();
 
   const showHeaderFooter = pathname !== '/login' && pathname !== '/signup';
 
@@ -159,3 +160,4 @@ function MainLayout({ children, user, cart, onLogout }) {
 }
 
 export default App;
+

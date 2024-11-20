@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import '../auth/loginPage.css'; // Adjust this path as needed
 import { ApiUrl } from '../../config';
 import AppleStore from '../../assets/images/appleStore.jpg';
+import Cookies from 'js-cookie'; // Import thư viện js-cookie
+
 const styles = {
   page: {
     backgroundImage: `url(${AppleStore})`, 
@@ -70,20 +72,31 @@ const LoginPage = ({ onLogin }) => {
       const response = await axios.get(`${ApiUrl}/users`, {
         params: { username, password },
       });
-      const user = response.data;
   
-      if (user) {
-        localStorage.setItem('user', JSON.stringify(user));
-        onLogin(user);
-        navigate(user.role === 'admin' ? '/dashboard/products' : '/');
+      const users = response.data;
+  
+      console.log('Response from API:', users);
+  
+      if (Array.isArray(users) && users.length > 0) {
+        const user = users[0];
+  
+        if (user && user.role) {
+          Cookies.set('user', JSON.stringify(user), { expires: 7 });
+          onLogin(user);
+  
+          console.log(`User role: ${user.role}, navigating to: ${user.role === 'admin' ? '/dashboard/products' : '/'}`);
+          navigate(user.role === 'admin' ? '/dashboard/products' : '/');
+        } else {
+          setError('Invalid user role');
+        }
       } else {
         setError('Invalid username or password');
       }
     } catch (err) {
-      setError('Error logging in');
+      console.error('Error during login:', err);
+      setError('Error logging in. Please try again later.');
     }
   };
-  
   
   
   return (

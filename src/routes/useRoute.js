@@ -1,20 +1,24 @@
-// src/components/UserPrivateRoute.js
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
-const UserPrivateRoute = ({ user }) => {
+const UserPrivateRoute = () => {
+  const userCookie = Cookies.get('user');
+  const user = userCookie ? JSON.parse(userCookie) : null;
+
+  console.log('User:', user); // Debugging: Check if user is retrieved correctly
+
   if (!user) {
-    // Redirect to login if the user is not authenticated
+    console.error('No user found. Redirecting to /login');
     return <Navigate to="/login" />;
   }
 
   if (user.role === 'admin') {
-    // Redirect to admin dashboard if the user is an admin
+    console.error('Admin user trying to access user route. Redirecting to /dashboard');
     return <Navigate to="/dashboard" />;
   }
 
-  // If authenticated and not an admin, allow access to the route
-  return <Outlet />;
+  return <Outlet />; // Render child routes for authenticated users
 };
 
 export default UserPrivateRoute;

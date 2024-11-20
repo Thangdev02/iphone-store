@@ -1,20 +1,19 @@
-// src/components/AdminPrivateRoute.js
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
-const AdminPrivateRoute = ({ user }) => {
-  if (!user) {
-    // Redirect to login if the user is not authenticated
-    return <Navigate to="/login" />;
+const AdminPrivateRoute = () => {
+  const userCookie = Cookies.get('user');
+  const user = userCookie ? JSON.parse(userCookie) : null;
+
+  console.log('Admin User:', user); // Debugging: Ensure user is correctly fetched
+
+  if (!user || user.role !== 'admin') {
+    console.error('Access denied. Redirecting to /');
+    return <Navigate to="/" />; // Redirect non-admin users to the homepage
   }
 
-  if (user.role !== 'admin') {
-    // Redirect non-admin users to the home page
-    return <Navigate to="/" />;
-  }
-
-  // If authenticated and has the admin role, allow access to the route
-  return <Outlet />;
+  return <Outlet />; // Render admin route if the user is an admin
 };
 
 export default AdminPrivateRoute;
