@@ -4,12 +4,14 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { ApiUrl } from '../../config';
 import AppleStore from '../../assets/images/appleStore.jpg';
+import '../auth/registerPage.css'; // Adjust this path as needed
+
 
 const styles = {
   page: {
     backgroundImage: `url(${AppleStore})`,
     backgroundSize: 'cover',
-    height: '100vh',
+    height: 'auto',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -46,11 +48,14 @@ const styles = {
     fontSize: '1rem',
     fontWeight: 'lighter',
   },
-  form: {
+  formContainer: {
     flex: 1,
     padding: '40px',
+    overflowY: 'auto',  // Enable scrolling when necessary
+    maxHeight: '80vh',  // Limit height to 80% of the viewport height
   },
 };
+
 
 const RegisterPage = () => {
   const [username, setUsername] = useState('');
@@ -217,6 +222,7 @@ const RegisterPage = () => {
               Register
             </Button>
           </Form>
+
           <p className="text-center mt-3">
             Already have an account? <a href="/login">Sign In</a>
           </p>

@@ -21,6 +21,7 @@ import HomePage from './pages/home/homePage';
 import Footer from './layouts/footer';
 import AboutUsPage from './pages/about/aboutUsPage';
 import ContactPage from './pages/contact/contactPage';
+import ProfilePage from './pages/profile/profilePage';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -112,6 +113,7 @@ function App() {
           {/* User-Only Routes */}
           <Route element={<UserPrivateRoute user={user} />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/shop" element={<StorePage addToCart={addToCart} />} />
             <Route path="/product/:id" element={<ProductDetailPage  addToCart={addToCart} />} />
             <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />

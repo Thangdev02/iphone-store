@@ -1,201 +1,221 @@
-/* StorePage.css */
-
-
+/* Global Styles */
 .container-fluid {
-    height: 100%;
+  height: 100%;
+}
+
+.row {
+  flex-grow: 1;
+  display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar-option {
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sidebar-option:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Product Card */
+.product-card {
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.card-content {
+  position: relative;
+  z-index: 1;
+  transition: filter 0.3s ease-in-out;
+}
+
+.product-card:hover .card-content {
+  filter: blur(5px); /* Blur the entire card content on hover */
+}
+
+/* Button Styling */
+.view-details-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .view-details-btn {
+  opacity: 1;
+}
+
+/* Product Image */
+.product-image {
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Pagination Dots */
+.pagination-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dots .dot.active {
+  background-color: #6a6a6a;
+}
+
+.pagination-dots .dot:hover {
+  background-color: #555;
+}
+
+/* Brand Filter Row */
+.brand-filter-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+  margin-bottom: 3%;
+}
+
+.brand-icon-container {
+  cursor: pointer;
+  text-align: center;
+}
+
+.brand-icon-circle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.brand-icon-container:hover .brand-icon-circle {
+  transform: scale(1.1); /* Enlarge on hover */
+  background-color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brand-icon-circle i {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.brand-icon-container.active .brand-icon-circle {
+  background-color: #474747;
+  border-color: #a2a2a2;
+}
+
+.brand-icon-container.active .brand-icon-circle i {
+  color: #fff;
+}
+
+.brand-label {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  .product-grid .product-card {
+    padding: 10px;
   }
-  
-  .row {
-    flex-grow: 1;
-    display: flex;
+
+  .product-title {
+    font-size: 14px;
   }
-  
-  .sidebar {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sidebar-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .sidebar-option {
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .sidebar-option:hover {
-    color: #007bff;
-    text-decoration: underline;
-  }
-  
-  
-  .product-card {
-    height: 100%; /* Optional if you want cards to take full height in each row */
-  }
-  
-  .sidebar h5 {
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  
-  .color-options {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .color {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .color.red { background-color: #ff4d4f; }
-  .color.blue { background-color: #1890ff; }
-  .color.green { background-color: #52c41a; }
-  .color.yellow { background-color: #faad14; }
-  .color.black { background-color: #000; }
-  
-  .product-card {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-content {
-    position: relative;
-    z-index: 1;
-    transition: filter 0.3s ease-in-out;
-  }
-  
-  .product-card:hover .card-content {
-    filter: blur(5px); /* Blur entire card content on hover */
-  }
-  
-  .view-details-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    z-index: 2;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .product-card:hover .view-details-btn {
-    opacity: 1; /* Show button on hover */
-  }
-  
-  .product-image {
-    height: 300px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover .product-image {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
-  .pagination-dots .dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pagination-dots .dot.active {
-    background-color: #000;
-  }
-  
-  .pagination-dots .dot:hover {
-    background-color: #555;
-  }
-  .brand-filter-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1% 0;
-  }
-  
+
   .brand-icon-container {
-    cursor: pointer;
-    text-align: center;
+    width: 50px;
+    height: 50px;
   }
-  
+
   .brand-icon-circle {
     width: 60px;
     height: 60px;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    transition: all 0.3s ease;
   }
-  
-  .brand-filter .brand-icon-container {
-    cursor: pointer;
-    padding: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
+
+  .product-image {
+    height: 250px;
   }
-  
-  .brand-filter .brand-icon-container:hover {
-    transform: scale(1.1);
+
+  .product-price {
+    font-size: 1rem;
   }
-  
-  .brand-icon-circle {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    background-color: #f8f8f8;
+
+  .pagination-dots .dot {
+    width: 10px;
+    height: 10px;
   }
-  
-  .brand-icon-circle i {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .brand-icon-container.active .brand-icon-circle {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  .brand-icon-container.active .brand-icon-circle i {
-    color: #fff;
-  }
-  
+
   .brand-label {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 0.8rem;
   }
-  
-  
-  
+}
+
+@media (max-width: 768px) {
+  .product-grid .product-card {
+    padding: 15px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .brand-filter-row {
+    margin-bottom: 5%;
+  }
+
+  .product-grid .product-card {
+    padding: 20px;
+  }
+}

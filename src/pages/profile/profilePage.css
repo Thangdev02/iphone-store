@@ -1,0 +1,84 @@
+.profile-card {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .profile-card .text-center h3 {
+    font-weight: bold;
+  }
+  
+  .avatar-container {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  .btn-action {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .btn-action:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  
+  .card-body p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  input, select {
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .btn1{
+    background-color: rgb(84, 84, 84);
+    border: none;
+  }
+  .btn2{
+    background-color: rgb(203, 203, 203);
+    color: black;
+    border: none;
+  }
+  .btn3{
+    background-color: rgb(138, 138, 138);
+    border: none;
+  }
+  @media (max-width: 430px) {
+    .text-center{
+        display: flex;
+    }
+    .btn-action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }}
+
+    .text-center{
+        display: flex;
+        justify-content: center;
+    }

@@ -19,6 +19,7 @@
   border-radius: 12px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
 }
 
 /* Left content style */
@@ -70,4 +71,51 @@
 
 .login-form .btn:hover {
   background-color: #002244;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column; /* Stack the login box vertically on smaller screens */
+    width: 90%; /* Increase the width to fit the screen */
+  }
+
+  .login-content {
+    padding: 20px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h3 {
+    font-size: 1.25rem; /* Adjust the font size for mobile */
+  }
+
+  .login-form .btn {
+    font-size: 0.9rem; /* Adjust button size */
+  }
+
+  .login-content h2 {
+    font-size: 1.5rem; /* Adjust the heading for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-content h2 {
+    font-size: 1.25rem; /* Make heading smaller on very small screens */
+  }
+
+  .login-form h3 {
+    font-size: 1.1rem;
+  }
+
+  .login-form .btn {
+    font-size: 0.9rem; /* Make button text smaller */
+    padding: 8px 0; /* Adjust padding for button */
+  }
+
+  .login-form .form-control {
+    font-size: 0.9rem; /* Make form inputs smaller on mobile */
+  }
 }

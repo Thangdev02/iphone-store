@@ -58,6 +58,7 @@ const styles = {
 
 
 const LoginPage = ({ onLogin }) => {
+ 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -66,24 +67,24 @@ const LoginPage = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // Make a GET request to the API with username and password as query parameters
       const response = await axios.get(`${ApiUrl}/users`, {
-        params: { username, password }
+        params: { username, password },
       });
-  
       const user = response.data;
   
       if (user) {
-        localStorage.setItem('user', JSON.stringify(user)); // Store the user in localStorage
-        onLogin(user); // Call the onLogin callback
-        navigate(user.role === 'admin' ? '/dashboard/products' : '/'); // Redirect based on user role
+        localStorage.setItem('user', JSON.stringify(user));
+        onLogin(user);
+        navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {
-        setError('Invalid username or password'); // Show error if no user found
+        setError('Invalid username or password');
       }
     } catch (err) {
-      setError('Error logging in'); // Show error if something went wrong with the request
+      setError('Error logging in');
     }
   };
+  
+  
   
   return (
     <div className="login-page" style={styles.page}>

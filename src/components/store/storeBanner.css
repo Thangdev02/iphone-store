@@ -1,13 +1,168 @@
+/* Keyframes for the bounce effect */
 @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0); /* Starting and ending at the original position */
-    }
-    50% {
-      transform: translateY(-20px); /* Move up by 30px */
-    }
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending at the original position */
   }
-  
-  .bounce-animation {
-    animation: bounce 3s infinite; /* Duration: 2s, repeats infinitely */
+  50% {
+    transform: translateY(-20px); /* Move up by 20px */
   }
-  
+}
+
+.bounce-animation {
+  animation: bounce 3s infinite; /* Duration: 3s, repeats infinitely */
+}
+
+/* Store Banner Styles */
+.banner-background {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+  transform: rotate(180deg);
+}
+
+.banner-watch {
+  width: 36%;
+  object-fit: contain;
+  position: absolute;
+  top: 8%;
+  right: 2%;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner-watch:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.banner-text {
+  position: absolute;
+  top: 24%;
+  left: 6%;
+  width: 45%;
+}
+
+.banner-text h1, .banner-text h2, .banner-text p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-text h2 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-text span {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.banner-text button {
+  background-color: #272728;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  transform: scale(1);
+}
+
+/* Hover Effect for Button */
+.banner-text button:hover {
+  background-color: #a8a8a8;
+  transform: scale(1.05);
+}
+
+.banner-text button:active {
+  background-color: #007bff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+  .banner-background {
+      height: 60vh;
+  }
+
+  .banner-watch {
+      width: 50%;
+      top: 12%;
+      right: 5%;
+      filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
+  }
+
+  .banner-text {
+      top: 18%;
+      left: 5%;
+      width: 70%;
+  }
+
+  .banner-text h1 {
+      font-size: 2rem;
+  }
+
+  .banner-text h2 {
+      font-size: 2.5rem;
+  }
+
+  .banner-text p {
+      font-size: 1rem;
+  }
+
+  .banner-text button {
+      font-size: 16px;
+      padding: 8px 16px;
+      width: 100%;
+  }
+}
+
+ @media (max-width: 430px) {
+  .banner-background {
+    height: 65vh;
+
+  }
+
+  .banner-watch {
+    width: 45%;
+    bottom: 5%; /* Adjust image position to the bottom */
+    right: 5%;
+    display: none;
+  }
+
+  .banner-text {
+    top: 10%; /* Slightly adjust text position */
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 95% !important;  /* Increase width for text */
+  }
+
+  .banner-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner-text h2 {
+    font-size: 3rem;
+  }
+
+  .banner-text p {
+    font-size: 1.1rem;
+  }
+
+  .banner-text button {
+    font-size: 18px;
+  }
+}

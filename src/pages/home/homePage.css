@@ -1,3 +1,26 @@
+/* General Responsive Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.list-category-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; /* Horizontal scrolling for smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller devices */
+    animation: moveRightToLeft 6s linear infinite; /* Adjust duration as needed */
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.list-category-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for cleaner design */
+}
+
+/* Keyframes for the Animation */
 @keyframes moveRightToLeft {
     0% {
         transform: translateX(0%);
@@ -7,10 +30,114 @@
     }
 }
 
-.list-category-container {
+/* Category Item Styles */
+.image-container {
+    flex: 0 0 auto; /* Prevent shrinking or growing */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    white-space: nowrap; /* Prevent line breaks */
-    animation: moveRightToLeft 6s linear infinite; /* Adjust duration as needed */
+    background-color: #ECEBEB;
+    border-radius: 50%;
+    width: 8rem; /* Set size for consistent visuals */
+    height: 8rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Heading Styles */
+h1,
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    /* Adjust spacing for medium screens */
+    .list-category-container {
+        flex-wrap: wrap; /* Wrap categories instead of scrolling */
+        animation: none; /* Disable animation for better experience */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .best-product-container {
+        flex-direction: column; /* Stack best products */
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for tablets */
+    .list-category-container {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .image-container {
+        width: 6rem; /* Adjust size for smaller screens */
+        height: 6rem;
+    }
+
+    .best-product-container {
+        flex-direction: column; /* Stack best products vertically */
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    h1,
+    p {
+        text-align: center; /* Center align text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust layout for smaller screens */
+    .list-category-container {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: flex-start; /* Align items horizontally */
+        align-items: center;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 1rem; /* Add spacing between items */
+        padding: 1rem;
+        animation: moveRightToLeft 6s linear infinite; /* Adjust duration as needed */
+    }
+    
+    .list-category-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for a cleaner look */
+    }
+    
+    
+    .image-container {
+        width: 5rem; /* Further adjust size for mobile */
+        height: 5rem;
+    }
+
+    .best-product-container {
+        flex-direction: column; /* Stack products */
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .find-your-love {
+        display: none;
+    }
+    h1 {
+        font-size: 1rem; /* Further reduce heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Reduce paragraph text size */
+    }
 }

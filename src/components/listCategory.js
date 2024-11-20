@@ -14,8 +14,8 @@ const ListCategory = (props) => {
        
     }, []);
     return (
-        <div className='image' style={{ width: '10%',height:'20vh',backgroundColor: '#ECEBEB', borderRadius: '50%',padding:'1%'}}>
-            <img className=' w-100' style={{ width: '100%' ,height:'100%', objectFit: 'fill', objectPosition: 'center', borderRadius: '50%'}} src={props.categoryImage} alt="Category" />
+        <div className='imageCircle' style={{ width: '10%',height:'20vh',backgroundColor: '#ECEBEB', borderRadius: '50%',padding:'1%'}}>
+            <img className=' w-100 imageCircle2' style={{ width: '100%' ,height:'100%', objectFit: 'fill', objectPosition: 'center', borderRadius: '50%'}} src={props.categoryImage} alt="Category" />
         </div>
     );
 };

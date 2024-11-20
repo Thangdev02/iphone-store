@@ -13,13 +13,13 @@ const CheckoutPage = ({ cart, placeOrder }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load user data from localStorage
-    const user = JSON.parse(localStorage.getItem('user'));
+    // Load user data from localStorage if available
+    const user = JSON.parse(localStorage.getItem('user'))[0]; // Retrieve the first user object
     if (user) {
       setBillingInfo({
-        fullName: user.username || '',
-        address: user.address || '',
-        phone: user.phone || '',
+        fullName: user.username || '', // Pre-fill with the user's username
+        address: user.address || '', // Pre-fill with the user's address
+        phone: user.phone || '', // Pre-fill with the user's phone number
       });
     }
   }, []);
@@ -31,8 +31,8 @@ const CheckoutPage = ({ cart, placeOrder }) => {
 
   const handlePlaceOrder = (e) => {
     e.preventDefault();
-    placeOrder(billingInfo);
-    navigate('/history');
+    placeOrder(billingInfo); // Use the billing information to place the order
+    navigate('/history'); // Redirect to order history
   };
 
   const totalAmount = cart.reduce((total, item) => total + item.price * item.quantity, 0);

@@ -1,0 +1,127 @@
+/* Background style */
+.register-page {
+    background-image: url('https://wallpaperaccess.com/full/4004077.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Register box style */
+  .register-box {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted-glass effect */
+    width: 70%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  }
+  
+  /* Left content style */
+  .register-content {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1602053540422-140b3eba9159?q=80&w=3328&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .register-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .register-content p {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  
+  /* Right form style */
+  .register-form {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .register-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .register-form .form-control {
+    border-radius: 6px;
+  }
+  
+  .register-form .btn {
+    background-color: #003366;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  
+  .register-form .btn:hover {
+    background-color: #002244;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .register-box {
+      flex-direction: column; /* Stack the form and content vertically on smaller screens */
+      width: 90%; /* Make the form take up more space on mobile */
+    }
+  
+    .register-content {
+      padding: 20px;
+    }
+  
+    .register-form {
+      padding: 20px;
+    }
+  
+    .register-form h3 {
+      font-size: 1.25rem; /* Adjust the font size for mobile */
+    }
+  
+    .register-content h2 {
+      font-size: 1.5rem; /* Make heading smaller on mobile */
+    }
+  
+    .register-form .btn {
+      font-size: 0.9rem; /* Adjust button size */
+    }
+  
+    .register-form .form-control {
+      font-size: 0.9rem; /* Adjust input font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-content h2 {
+      font-size: 1.25rem; /* Smaller heading for very small screens */
+    }
+  
+    .register-form h3 {
+      font-size: 1.1rem; /* Smaller form title */
+    }
+  
+    .register-form .btn {
+      font-size: 0.9rem; /* Make button text smaller */
+      padding: 8px 0; /* Adjust padding for button */
+    }
+  
+    .register-form .form-control {
+      font-size: 0.9rem; /* Adjust form inputs for small screens */
+    }
+  }
+  

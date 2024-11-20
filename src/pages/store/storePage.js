@@ -139,24 +139,14 @@ const StorePage = ({ addToCart }) => {
   return (
     <div>
       <StoreBanner />
-      <h1
-        style={{
-          fontSize: '2.5rem',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          paddingTop: '4%',
-          fontFamily: 'Quicksand',
-        }}
-      >
-        New Arrivals
-      </h1>
+      <h1 className="store-title text-center mt-6">New Arrivals</h1>
 
       {/* Top Brand Filter Row */}
       <div className="brand-filter-row text-center mb-4">
         <Container>
-          <Row style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Row className="justify-content-center">
             {paginateBrands().map((brand) => (
-              <Col key={brand.brandId} xs={2} className="text-center">
+              <Col key={brand.brandId} xs={4} sm={3} md={2} className="brand-icon-col text-center">
                 <div
                   className={`brand-icon-container ${selectedBrand === brand.brandId ? 'active' : ''}`}
                   onClick={() => handleBrandClick(brand.brandId)}
@@ -196,22 +186,11 @@ const StorePage = ({ addToCart }) => {
 
           return brandProducts.length > 0 ? (
             <div key={brand.brandId} className="brand-section">
-              <h4
-                style={{
-                  fontSize: '1.5rem',
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  padding: '4% 0',
-                  fontFamily: 'Quicksand',
-                }}
-                className="brand-title"
-              >
-                {brand.brandName}
-              </h4>
+              <h4 className="brand-title">{brand.brandName}</h4>
               <Row className="product-grid">
                 {paginatedProducts.map((product) => (
-                  <Col md={3} sm={6} key={product.id} className="mb-4">
-                    <Card className="product-card" style={{boxShadow:'none',border:'none'}}> 
+                  <Col xs={6} sm={6} md={3} key={product.id} className="mb-4">
+                    <Card className="product-card" style={{border: 'none',boxShadow: 'none'}}>
                       <div className="card-content">
                         <Card.Img
                           variant="top"
@@ -221,15 +200,11 @@ const StorePage = ({ addToCart }) => {
                         />
                         <Card.Body>
                           <Card.Title className="product-title">{product.productName}</Card.Title>
+                          <Card.Text className="product-info">
+                            <span className="product-price">${product.price}</span>
+                          </Card.Text>
                           {product.discount && (
                             <Badge
-                              style={{
-                                padding: '2% 4%',
-                                fontSize: '12px',
-                                position: 'absolute',
-                                top: '4%',
-                                right: '4%',
-                              }}
                               pill
                               bg="danger"
                               className="discount-badge"
@@ -237,16 +212,11 @@ const StorePage = ({ addToCart }) => {
                               {product.discount}% OFF
                             </Badge>
                           )}
-                          <Card.Text className="product-info">
-                            <span style={{ fontWeight: 'bold' }} className="product-price">
-                              ${product.price}
-                            </span>
-                          </Card.Text>
+                      
                         </Card.Body>
                       </div>
                       <Button
                         variant="outline-secondary"
-                        size="lg"
                         className="view-details-btn"
                         onClick={() => handleViewDetails(product.id)}
                       >
@@ -256,6 +226,7 @@ const StorePage = ({ addToCart }) => {
                   </Col>
                 ))}
               </Row>
+
               {/* Dot Pagination */}
               {totalPages > 1 && (
                 <div className="pagination-dots text-center mt-4">
