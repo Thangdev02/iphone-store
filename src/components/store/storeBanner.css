@@ -1,0 +1,13 @@
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Starting and ending at the original position */
+    }
+    50% {
+      transform: translateY(-20px); /* Move up by 30px */
+    }
+  }
+  
+  .bounce-animation {
+    animation: bounce 3s infinite; /* Duration: 2s, repeats infinitely */
+  }
+  

@@ -1,0 +1,658 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "iPhone 13 Pro",
+      "brandId": "8",
+      "quantity": 10,
+      "price": 999,
+      "productImage": "https://i.pinimg.com/736x/89/e6/11/89e611fc879b8375af421f0200beb452.jpg",
+      "description": "The latest iPhone with advanced features.",
+      "discount": 10
+    },
+    {
+      "id": "2",
+      "productName": "iPhone 12",
+      "brandId": "8",
+      "quantity": 15,
+      "price": 799,
+      "productImage": "https://i.pinimg.com/736x/6e/11/af/6e11af3517edff2ff1aeca18a5a8b9d5.jpg",
+      "description": "The iPhone 12 with a great camera and design.",
+      "discount": 5
+    },
+    {
+      "id": "5533",
+      "brandId": "8",
+      "productName": "Iphone 15",
+      "quantity": 2,
+      "price": 20000,
+      "description": "Nothing Description",
+      "discount": 2,
+      "productImage": "https://i.pinimg.com/736x/d3/65/08/d3650856ca0cd0c09f931ec2ce27203b.jpg"
+    },
+    {
+      "id": "c6d7",
+      "productImage": "https://i.pinimg.com/736x/0a/6c/ea/0a6cea1156b0848e320a7e0b556ae962.jpg",
+      "productName": "Apple Magic Keyboard",
+      "brandId": "2",
+      "quantity": 10,
+      "price": 299,
+      "description": "Magic Keyboard delivers an amazing typing experience, has a built-in trackpad, and provides front and back protection",
+      "discount": 5
+    },
+    {
+      "id": "5427",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUWA3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1695933856697",
+      "productName": "Apple Pencil",
+      "quantity": 100,
+      "price": 79,
+      "discount": 5,
+      "description": "\nApple Pencil (USB-C) is perfect for taking notes, sketching, marking up documents, journaling, and more. It delivers pixel‑perfect precision, low latency, and tilt sensitivity. So it’s as natural to use as a pencil.",
+      "brandId": "3"
+    },
+    {
+      "id": "e964",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MA7V4?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1723595144990",
+      "price": 49,
+      "quantity": 22,
+      "brandId": "3",
+      "productName": "Iphone 16 Pro Max Silicone Case",
+      "description": "\nDesigned by Apple to complement iPhone 16 Pro Max, the Silicone Case with MagSafe is a delightful way to protect your iPhone."
+    },
+    {
+      "id": "1639",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-select-202409_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1725502554118",
+      "productName": "AirPods 4",
+      "quantity": 24,
+      "price": 179,
+      "description": "\nRedesigned for exceptional fit and audio performance — and available with Active Noise Cancellation, Adaptive Audio, and Transparency mode for the first time in this design. The powerful H2 chip delivers clearer calls with Voice Isolation, the magic of Conversation Awareness, and a new, hands-free way to interact with Siri. Footnote ",
+      "discount": 10,
+      "brandId": "5"
+    },
+    {
+      "id": "ff95",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-2-hero-select-202409_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1725492499003",
+      "productName": "AirPods Pro 2",
+      "brandId": "5",
+      "quantity": 52,
+      "price": 249,
+      "description": "\nExperience unprecedented sound with pro-level Active Noise Cancellation, Footnote ³ Adaptive Audio for the right mix of noise control in any environment, Transparency mode to hear the world around you, Footnote ² and Conversation Awareness to seamlessly lower your media volume when you speak to someone nearby. Footnote "
+    },
+    {
+      "id": "613f",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-compare-202409?wid=420&hei=500&fmt=jpeg&qlt=90&.v=1723594294259",
+      "productName": "AirPods Max",
+      "brandId": "5",
+      "quantity": 12,
+      "price": 549,
+      "description": "The ultimate over-ear personal listening experience — now in fresh new colors. AirPods Max deliver stunningly detailed, high-fidelity audio. Personalized Spatial Audio with dynamic head tracking for sound that surrounds you. Footnote ⁴ Pro-level Active Noise Cancellation to remove unwanted sound. Footnote ³ Transparency mode to comfortably hear the world around you. Up to 20 hours of battery life on a single charge. Footnote ¹⁵ Effortless setup and on-head detection for a magical listening experience. Now with USB-C for easy charging.",
+      "discount": 5
+    },
+    {
+      "id": "e98a",
+      "productName": "Beats Studio Pro Wireless Headphones — Sandstone",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQTR3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1687660671097",
+      "price": 349.99,
+      "quantity": 12,
+      "description": "\nBeats Custom Acoustic Platform\nThe Beats Studio Pro custom acoustic platform delivers an immersive listening experience. Each custom 40mm driver has been engineered for optimal clarity, with near-zero distortion even at high volume – an improvement of up to 80% compared to Beats Studio3, providing increased audio fidelity. An integrated digital processor optimizes the final frequency response for a powerful, yet balanced sound profile crafted to bring out the subtle details of whatever you’re listening to.\n\nActive Noise Cancelling and Transparency Mode\nAt the touch of a button, two dynamic listening modes let you choose whether to keep the world out, or let it in. Fully adaptive Active Noise Cancelling (ANC) continuously monitors the noise around you in real-time, then creates a precisely-tuned filter to cancel it out. Easily switch to Transparency mode to let the sounds of your environment mix seamlessly with your music when you want to stay present and aware.",
+      "brandId": "5"
+    },
+    {
+      "id": "1380",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUW43?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1712255584961",
+      "productName": "Beats Solo 4 — On-Ear Wireless Headphones",
+      "brandId": "5",
+      "quantity": 25,
+      "price": 199.99,
+      "description": "\nThe classic. Made new.\nThe original go-to headphones for active music lovers are back — and better than ever.\n\nSpatial Audio with Dynamic Head Tracking¹\nLossless audio via USB-C or 3.5 mm audio cable²\nUp to 50 hours of Battery Life³\nCompatible with iOS and Android\nRe-engineered for incredible sound.\nUpgraded drivers. Rebalanced acoustics. Improved frequency response. Custom-built 40 mm transducers minimize electronic artifacts, latency, and distortion for extraordinary clarity and range.\n\nLike being surrounded by 64 speakers at once.\nPersonalized Spatial Audio with dynamic head tracking uses built-in gyroscopes and accelerometers to surround you with sound as you move, creating a truly immersive listening experience.¹",
+      "discount": 10
+    },
+    {
+      "id": "7814",
+      "productName": "Beats Solo Buds — True Wireless Earbuds",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUVY3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1713296133256",
+      "quantity": 12,
+      "price": 79.99,
+      "description": "\nMore than a little powerful.\nFeaturing the tiniest case we’ve ever made, these mighty small earbuds are packed with incredibly big sound.\n\nFully custom acoustic architecture\nErgonomically angled acoustic nozzles for a natural fit\nExtended earbud battery life with up to 18 hours of playback¹\nCompatible with both iOS and Android, including one-touch pairing²\nDesigned for music first.\nThe cleanly balanced tuning gives you the full range and emotion of all your favorite music with richly detailed clarity and power with accurate bass reproduction.",
+      "brandId": "5"
+    },
+    {
+      "id": "9202",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14-digitalmat-gallery-3-202209?wid=728&hei=666&fmt=png-alpha&.v=1662055813794",
+      "productName": "iPhone 14",
+      "price": 599.99,
+      "quantity": 10,
+      "description": "6.1-inch durable design footnote 1 with Ceramic Shield and water and dust resistance\nAll-day battery life with up to 20 hours of video playback footnote 2\nVital safety features like Roadside Assistance via satellite, footnote 3 Emergency SOS via satellite, footnote 3 and Crash Detection footnote 4\nA Pro-level Main camera and advanced image processing for sensational shots in all kinds of light\nA15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro",
+      "brandId": "8"
+    },
+    {
+      "id": "3aca",
+      "productName": "IPhone 16 Pro",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone16pro-digitalmat-gallery-3-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=1723843057832",
+      "description": "Titanium design with larger 6.3-inch Super Retina XDR display, footnote 1 durable latest-generation Ceramic Shield, Action button, and USB-C with USB 3 speeds footnote 2\nThe first iPhone designed for Apple Intelligence. footnote 3 Personal, private, powerful.\nCamera Control gives you an easier way to quickly access camera tools\nA18 Pro chip powers Apple Intelligence footnote 3 and AAA gaming — and helps deliver a huge leap in battery life\n4K 120 fps Dolby Vision and 4 studio-quality mics. A Pro studio in your pocket.\nCapture magical spatial photos and videos on iPhone 16 Pro, then relive them on Apple Vision Pro",
+      "brandId": "8",
+      "quantity": 12,
+      "price": 999.99
+    },
+    {
+      "id": "8712",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphonese-digitalmat-gallery-3-202203?wid=728&hei=666&fmt=png-alpha&.v=1644987579761",
+      "productName": "IPhone SE",
+      "brandId": "8",
+      "description": "4.7-inch Retina HD display footnote ¹ that’s bright, colorful, and sharp\nA15 Bionic, the same superpowerful chip that’s in iPhone 13\n5G for fast downloads and high-quality streaming footnote ²\nSmarter camera makes automatic adjustments so faces, places, everything looks fabulous\nHome button with Touch ID — securely unlock, sign in to apps, and use Apple Pay",
+      "discount": 10,
+      "price": 429,
+      "quantity": 2
+    },
+    {
+      "id": "b8c4",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone14plus-digitalmat-gallery-3-202209?wid=728&hei=666&fmt=png-alpha&.v=1662055814336",
+      "productName": "IPhone 14 Plus",
+      "brandId": "8",
+      "description": "6.7-inch durable design footnote ¹ with Ceramic Shield and water and dust resistance\nAll-day battery life with up to 26 hours of video playback²\nVital safety features like Roadside Assistance via satellite, footnote 3 Emergency SOS via satellite, footnote 3 and Crash Detection footnote 4\nA Pro-level Main camera and advanced image processing for sensational shots in all kinds of light\nA15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro",
+      "price": 699,
+      "quantity": 41
+    },
+    {
+      "id": "2796",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-ultra2-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1724168059585",
+      "productName": "Apple Watch Ultra 2",
+      "brandId": "7",
+      "quantity": 13,
+      "price": 799,
+      "description": "The ultimate sports and adventure watch has a rugged 49mm titanium case with 100-meter water resistance  footnote  § and IP6X dust resistance.  footnote  ° Now in black\nThe most accurate GPS in a sports watch Footnote 1\nCustomizable Action button controls a variety of functions. Quickly switch between starting a workout, marking a Compass Waypoint, beginning a dive, and more\nUp to 36 hours of battery life, up to 72 hours on low power settings, and up to 17 hours of workout use in Low Power Mode Footnote 2\nPair with four band styles specialized for outdoor adventure, water sports, and all workout types"
+    },
+    {
+      "id": "7031",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s10-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1724168059157",
+      "price": 399,
+      "description": "The thinnest Apple Watch ever, with our biggest display. With a new Wide-Angle Always-On OLED Retina display Footnote 1\nGet health insights day and night. Now with sleep apnea notifications  footnote  §\nTrack all your workouts and activity. New sensors for water sports\nFaster charging gives you up to 80 percent battery in 30 minutes Footnote ∆\nGet help in an emergency or if you fall or are in a car crash  footnote  °",
+      "productName": "Apple Watch Series 10",
+      "brandId": "7",
+      "quantity": 12,
+      "discount": 5
+    },
+    {
+      "id": "3e25",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-hermes-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1724168059486",
+      "productName": "Apple Watch Hermès Series 10",
+      "brandId": "7",
+      "quantity": 10,
+      "price": 1249.49,
+      "description": "Exclusive Hermès bands and watch faces\nThe thinnest Apple Watch ever, with our biggest display. With a new Wide-Angle Always-On OLED Retina display Footnote 1\nGet health insights day and night. Now with sleep apnea notifications Footnote §\nFaster charging gives you up to 80 percent battery in 30 minutes Footnote ∆\nInnovative safety features ensure you get help if you fall or get in a car crash Footnote °"
+    },
+    {
+      "id": "0503",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-hermes-ultra-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1724168059062",
+      "price": 1399,
+      "brandId": "7",
+      "productName": "Apple Watch Hermès Ultra 2",
+      "quantity": 8,
+      "description": "Exclusive Hermès En Mer knit band, designed for water sports and Hermès Regatta watch face\nThe ultimate sports and adventure watch has a rugged 49mm natural titanium case with 100-meter water resistance Footnote § and IP6X dust resistance Footnote °\nThe most accurate GPS in a sports watch Footnote 1\nCustomizable Action button controls a variety of functions. With a sailing inspired countdown timer exclusive to Hermès Ultra 2\nUp to 36 hours of battery life, up to 72 hours on low power settings, and up to 17 hours of workout use in Low Power Mode Footnote 2"
+    },
+    {
+      "id": "8bfc",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-digitalmat-gallery-4-202409?wid=728&hei=666&fmt=png-alpha&.v=1725019652357",
+      "productName": "Apple Watch SE ",
+      "description": "Set up Apple Watch For Your Kids,  footnote  § even if they don’t have their own iPhone\nStay active with a range of workout types and motivating metrics\nWith a cellular plan you can call and text, even without your iPhone\nGet help in an emergency or if you fall or are in a car crash  footnote  °\nTrack sleep stages and see trends with the Sleep app",
+      "brandId": "7",
+      "quantity": 6,
+      "price": 249,
+      "discount": 20
+    },
+    {
+      "id": "d33b",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MC7K4ref?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724186588675",
+      "productName": "46mm Gold Milanese Loop",
+      "quantity": 12,
+      "price": 99,
+      "description": "\nA modern interpretation of a design developed in Milan at the end of the 19th century. Woven on specialized Italian machines, the smooth stainless steel mesh wraps fluidly around your wrist. And because it’s fully magnetic, the Milanese Loop is infinitely adjustable, ensuring a perfect fit. An additional physical vapor deposition (PVD) layer gives the stainless steel its distinctive finish.\n\nThis band is carbon neutral. The Milanese Loop contains 65% recycled content by weight, 100% of manufacturing electricity is covered by clean energy, and 50% or more of all carbon neutral Apple Watch products are shipped without airplanes.º",
+      "brandId": "3"
+    },
+    {
+      "id": "4b65",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXL83?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1724186591214",
+      "price": 49,
+      "productName": "46mm Lake Green Sport Loop",
+      "brandId": "3",
+      "quantity": 6,
+      "description": "\nSoft, breathable, and lightweight, the Sport Loop features a hook-and-loop fastener for quick and easy adjustment. The double-layer nylon weave has dense loops on the skin side that provide soft cushioning while allowing moisture to escape. This weave is made with 82% recycled yarns, some of which contain material from discarded fishing nets."
+    },
+    {
+      "id": "605c",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNWP3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1696021359982",
+      "productName": "35W Dual USB-C Port Power Adapter",
+      "brandId": "3",
+      "quantity": 100,
+      "price": 59,
+      "description": "The 35W Dual USB‑C Port Power Adapter allows you to charge two devices at the same time, whether you’re at home, in the office, or on the go. Apple recommends using it with MacBook Air. You can also use it with iPhone, iPad, Apple Watch, and AirPods.\n\nPair this power adapter with the World Travel Adapter Kit to charge in other regions around the world.\n\nCharging cable sold separately."
+    },
+    {
+      "id": "e093",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HR1X2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1699474166241",
+      "brandId": "1",
+      "productName": "Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charging Dock with MagSafe",
+      "quantity": 10,
+      "description": "\nThe Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charging Dock with MagSafe is designed to support StandBy for a full-screen experience on your iPhone while charging on its side with MagSafe. This dock enables perfect viewing angles of your MagSafe-enabled iPhone, making it ideal for your nightstand, kitchen counter, or desk. For each place you charge with this MagSafe dock, StandBy will remember your preferred view, whether it’s a clock, photos, or widgets. This ultraconvenient charging dock delivers 15W of fast wireless charging to your iPhone 15, iPhone 14, or MagSafe-compatible models while simultaneously fast charging your Apple Watch Ultra 2, Apple Watch Series 9, or other fast-charge-compatible Apple Watch models.",
+      "price": 119.49
+    },
+    {
+      "id": "e1d7",
+      "description": "\nRethink where and how you charge with this design-forward 3-in-1 powered solution. The new magnetic fast-charging module for Apple Watch charges in a fraction of the time while the MagSafe charging pad delivers the fastest possible charge for iPhone 12 and iPhone 13 models. Spend less time charging, and get the most from your Apple essentials. Modern minimalist design sensibilities and lay-flat design go anywhere and look great everywhere.\n\nFast Charging for Apple Watch Series 9 and Apple Watch Ultra 2\nGet a substantial power boost in no time with the new Magnetic fast-charging module for Apple Watch Series 9 and Apple Watch Ultra 2.*\n\nSeamless MagSafe Experience\nOfficial MagSafe technology simplifies your charging experience with seamless alignment and the fastest possible charge up to 15W for iPhone 12 or newer.\n\nAdjustable View for Apple Watch\nLay your Apple Watch flat or put it to work as an alarm clock in Nightstand mode. The Magnetic charging module for Apple Watch can be raised to work in either orientation.",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPU72?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1636763768000",
+      "productName": "Belkin BOOST↑CHARGE™ PRO 3-in-1 Wireless Charging Pad with MagSafe",
+      "quantity": 12,
+      "price": 149.15,
+      "brandId": "1"
+    },
+    {
+      "id": "0db0",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPL72?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1619028438000",
+      "productName": "Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charger Stand with MagSafe",
+      "description": "\nThe Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charger Stand with MagSafe simplifies your charging experience. This convenient solution delivers the fastest possible charge (up to 15W) to your new iPhone. Leveraging the power of MagSafe technology, simply place your iPhone on the charging stand for a secure, aligned connection in portrait or landscape mode. And to complete your charging solution, you can place your AirPods on the Qi wireless charging base below.\n\nMade for MagSafe\nLeveraging the new MagSafe technology for iPhone, you get seamless alignment and fast wireless charging every time for the easiest way to charge yet. The secure connection keeps your iPhone safely in place, even when your group text has it buzzing nonstop.\n\nUltra-Fast Wireless Charging\nDelivering up to 15W, you can get a charge while getting ready in the morning or between meetings. And you can charge your iPhone and AirPods at the same time. There’s the MagSafe wireless stand which charges up to 15W for iPhone and a Qi pad to wirelessly charge your AirPods.",
+      "price": 99.95,
+      "quantity": 12,
+      "brandId": "1"
+    },
+    {
+      "id": "ca91",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MT0H3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1692901449464",
+      "productName": "Apple Watch Magnetic Fast Charger to USB-C Cable (1 m)",
+      "description": "\nDurable, woven cable with fast-charging capabilities for select Apple Watch models.¹ Simply hold the connector near the back of the watch, where magnets cause it to snap into place automatically.",
+      "quantity": 11,
+      "price": 29.15,
+      "brandId": "1",
+      "discount": 10
+    }
+  ],
+  "brands": [
+    {
+      "id": "7b69",
+      "brandName": "Newest",
+      "brandId": 1
+    },
+    {
+      "id": "263e",
+      "brandName": "Keyboard",
+      "brandId": 2
+    },
+    {
+      "id": "2f16",
+      "brandName": "Other",
+      "brandId": 3
+    },
+    {
+      "id": "ec92",
+      "brandName": "Headphone",
+      "brandId": 5
+    },
+    {
+      "id": "2b33",
+      "brandName": "Ipad",
+      "brandId": 6
+    },
+    {
+      "id": "52e9",
+      "brandName": "Watch",
+      "brandId": 7
+    },
+    {
+      "brandId": 8,
+      "brandName": "IPhone",
+      "id": "0227"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "email": "admin@example.com",
+      "phone": "123-456-7890"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "user123",
+      "role": "user",
+      "email": "user@example.com",
+      "phone": "0949450800"
+    },
+    {
+      "id": "6d71",
+      "username": "test ",
+      "password": "123456",
+      "email": "test@gmail.com",
+      "phone": "09123123123",
+      "role": "user"
+    },
+    {
+      "id": "52fe",
+      "username": "thangle",
+      "password": "123456",
+      "email": "thangdev02@gmail.com",
+      "phone": "0949450800",
+      "role": "user"
+    },
+    {
+      "id": "05ea",
+      "username": "testacc",
+      "password": "123456",
+      "email": "test@gmail.com",
+      "phone": "0123324123",
+      "dob": "2024-11-06",
+      "gender": "male",
+      "address": "HCM",
+      "role": "user"
+    },
+    {
+      "id": "7990",
+      "username": "Tim Cook",
+      "password": "123456",
+      "email": "timcook@apple.com",
+      "phone": "09123123123",
+      "dob": "2024-11-08",
+      "gender": "male",
+      "address": "US",
+      "role": "user",
+      "avatar": "https://cafefcdn.com/203337114487263232/2024/4/15/tim-cook-17131546935671543978626-1713163472868-1713163473337446631555.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": "2ba4",
+      "productId": 1,
+      "productName": "iPhone 13 Pro",
+      "price": 999,
+      "quantity": 1
+    },
+    {
+      "id": "0364",
+      "productId": 1,
+      "productName": "iPhone 13 Pro",
+      "price": 999,
+      "quantity": 1
+    },
+    {
+      "id": "3ce9",
+      "productId": 1,
+      "productName": "iPhone 13 Pro",
+      "price": 999,
+      "quantity": 1
+    },
+    {
+      "id": "81c4",
+      "productId": 1,
+      "productName": "iPhone 13 Pro",
+      "price": 999,
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "f508",
+      "userId": 2,
+      "items": [
+        {
+          "productId": "1",
+          "productName": "iPhone 13 Pro",
+          "price": 999,
+          "quantity": 2,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437075.jpg?t=st=1730938020~exp=1730941620~hmac=e3c26a7701923d66ff08b6ff776c1eda77daf7df18494e67c25ecf95134f1962&w=900"
+        },
+        {
+          "productId": "2",
+          "productName": "iPhone 12",
+          "price": 799,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437071.jpg?t=st=1730938101~exp=1730941701~hmac=907967c99bd99f37659fc9e0b03cba8a804993f3a9016bcae62531e0af4cd5a0&w=2000"
+        }
+      ],
+      "totalAmount": 2797,
+      "date": "2024-11-07T01:01:40.601Z",
+      "billingInfo": {
+        "fullName": "Thang Le Quoc",
+        "address": "",
+        "city": "",
+        "zip": "",
+        "country": "",
+        "phone": ""
+      }
+    },
+    {
+      "id": "746e",
+      "userId": 2,
+      "items": [
+        {
+          "productId": "1",
+          "productName": "iPhone 13 Pro",
+          "price": 999,
+          "quantity": 2,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437075.jpg?t=st=1730938020~exp=1730941620~hmac=e3c26a7701923d66ff08b6ff776c1eda77daf7df18494e67c25ecf95134f1962&w=900"
+        }
+      ],
+      "totalAmount": 1998,
+      "date": "2024-11-07T01:07:25.103Z",
+      "billingInfo": {
+        "fullName": "Huy",
+        "address": "",
+        "city": "",
+        "zip": "",
+        "country": "",
+        "phone": ""
+      }
+    },
+    {
+      "id": "90ad",
+      "userId": 2,
+      "items": [
+        {
+          "productId": "1",
+          "productName": "iPhone 13 Pro",
+          "price": 999,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437075.jpg?t=st=1730938020~exp=1730941620~hmac=e3c26a7701923d66ff08b6ff776c1eda77daf7df18494e67c25ecf95134f1962&w=900"
+        }
+      ],
+      "totalAmount": 999,
+      "date": "2024-11-07T01:08:46.375Z",
+      "billingInfo": {
+        "fullName": "Thang Le Quoc",
+        "address": "",
+        "city": "",
+        "zip": "",
+        "country": "",
+        "phone": ""
+      }
+    },
+    {
+      "id": "5f07",
+      "userId": "6d71",
+      "items": [
+        {
+          "productId": "5533",
+          "productName": "Iphone 15",
+          "price": 20000,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-vector/realistic-white-smartphone-front-back_52683-29903.jpg?t=st=1730942722~exp=1730946322~hmac=53a903a159064202b0d37c01cd4f2bfbca9a010eb761474119207048016bb0c7&w=2000"
+        },
+        {
+          "productId": "c9ec",
+          "productName": "Samsung phone",
+          "price": 10000,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-vector/realistic-phones-different-views_52683-28436.jpg?t=st=1730944395~exp=1730947995~hmac=b555b777176de3f62ab6dc0fa94e971b1672b5eaf05ff49818b27c274c91a5e4&w=2000"
+        }
+      ],
+      "totalAmount": 30000,
+      "date": "2024-11-07T02:05:21.062Z",
+      "billingInfo": {
+        "fullName": "Test User",
+        "address": "HCM",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "18d4",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "1",
+          "productName": "iPhone 13 Pro",
+          "price": 999,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437075.jpg?t=st=1730938020~exp=1730941620~hmac=e3c26a7701923d66ff08b6ff776c1eda77daf7df18494e67c25ecf95134f1962&w=900"
+        }
+      ],
+      "totalAmount": 999,
+      "date": "2024-11-19T13:31:11.969Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "USA",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "2f01",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "1e4a",
+          "productName": "E-DRA EK384",
+          "price": 779,
+          "quantity": 1,
+          "productImage": "https://gamingx.vn/wp-content/uploads/2022/07/321_2020130_2capture0026.png"
+        },
+        {
+          "productId": "1",
+          "productName": "iPhone 13 Pro",
+          "price": 999,
+          "quantity": 1,
+          "productImage": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437075.jpg?t=st=1730938020~exp=1730941620~hmac=e3c26a7701923d66ff08b6ff776c1eda77daf7df18494e67c25ecf95134f1962&w=900"
+        }
+      ],
+      "totalAmount": 1778,
+      "date": "2024-11-19T13:57:32.390Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "HCM",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "09dd",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "e093",
+          "productName": "Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charging Dock with MagSafe",
+          "price": 119.49,
+          "quantity": 1,
+          "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HR1X2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1699474166241"
+        }
+      ],
+      "totalAmount": 119.49,
+      "date": "2024-11-19T17:15:38.321Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "USA",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "f062",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "c6d7",
+          "productName": "Apple Magic Keyboard",
+          "price": 299,
+          "quantity": 1,
+          "productImage": "https://i.pinimg.com/736x/0a/6c/ea/0a6cea1156b0848e320a7e0b556ae962.jpg"
+        }
+      ],
+      "totalAmount": 299,
+      "date": "2024-11-19T17:19:26.386Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "US",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "b0a7",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "c6d7",
+          "productName": "Apple Magic Keyboard",
+          "price": 299,
+          "quantity": 1,
+          "productImage": "https://i.pinimg.com/736x/0a/6c/ea/0a6cea1156b0848e320a7e0b556ae962.jpg"
+        },
+        {
+          "productId": "5427",
+          "productName": "Apple Pencil",
+          "price": 79,
+          "quantity": 1,
+          "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MUWA3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1695933856697"
+        },
+        {
+          "productId": "613f",
+          "productName": "AirPods Max",
+          "price": 549,
+          "quantity": 1,
+          "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-compare-202409?wid=420&hei=500&fmt=jpeg&qlt=90&.v=1723594294259"
+        }
+      ],
+      "totalAmount": 927,
+      "date": "2024-11-19T17:22:27.742Z",
+      "billingInfo": {
+        "fullName": "admin",
+        "address": "HCM",
+        "phone": "123-456-7890"
+      }
+    },
+    {
+      "id": "f77e",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "e1d7",
+          "productName": "Belkin BOOST↑CHARGE™ PRO 3-in-1 Wireless Charging Pad with MagSafe",
+          "price": 149.15,
+          "quantity": 1,
+          "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPU72?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1636763768000"
+        }
+      ],
+      "totalAmount": 149.15,
+      "date": "2024-11-19T17:28:20.161Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "US",
+        "phone": "09123123123"
+      }
+    },
+    {
+      "id": "7db1",
+      "userId": "7990",
+      "items": [
+        {
+          "productId": "0db0",
+          "productName": "Belkin BOOST↑CHARGE™ PRO 2-in-1 Wireless Charger Stand with MagSafe",
+          "price": 99.95,
+          "quantity": 2,
+          "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPL72?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1619028438000"
+        }
+      ],
+      "totalAmount": 199.9,
+      "date": "2024-11-19T20:17:34.273Z",
+      "billingInfo": {
+        "fullName": "Tim Cook",
+        "address": "US",
+        "phone": "09123123123"
+      }
+    }
+  ]
+}

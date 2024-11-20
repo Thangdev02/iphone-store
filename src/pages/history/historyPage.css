@@ -1,0 +1,78 @@
+/* src/pages/history/orderHistoryPage.css */
+
+.order-history-container {
+  margin-top: 20px;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.order-history-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #cececea5;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 10px 20px;
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  width: 45%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.left {
+  right: 6%;
+}
+
+.timeline-item.right {
+  left: 60%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border: 2px solid #fff;
+  top: 45%;
+  right: -6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -118px;
+}
+.timeline-item.right::after {
+  left: -107px;
+}
+.timeline-content {
+  padding: 10px;
+}
+
+.order-details-btn {
+  margin-top: 10px;
+  display: block;
+  width: fit-content;
+}

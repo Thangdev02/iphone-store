@@ -1,0 +1,16 @@
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-24%);
+    }
+}
+
+.list-category-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap; /* Prevent line breaks */
+    animation: moveRightToLeft 6s linear infinite; /* Adjust duration as needed */
+}

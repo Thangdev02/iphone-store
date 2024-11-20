@@ -1,0 +1,36 @@
+/* src/layouts/AdminLayout.css */
+
+.admin-sidebar {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    border-right: 1px solid #dee2e6;
+  }
+  
+  .admin-sidebar h4 {
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .admin-sidebar .link {
+    padding: 10px;
+    color: #495057;
+    text-decoration: none;
+  }
+  
+  .admin-sidebar .link:hover {
+    background-color: #e9ecef;
+    border-radius: 4px;
+  }
+  
+  .admin-sidebar .active-link {
+    font-weight: bold;
+    color: #007bff;
+    background-color: #e2e6ea;
+    border-radius: 4px;
+  }
+  
+  .admin-content {
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  

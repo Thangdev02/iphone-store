@@ -1,0 +1,73 @@
+/* Background style */
+.login-page {
+  background-image: url('https://wallpaperaccess.com/full/4004077.jpg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box style */
+.login-box {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 70%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Left content style */
+.login-content {
+  flex: 1;
+  background: url('https://wallpaperaccess.com/full/4004077.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.login-content p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+/* Right form style */
+.login-form {
+  flex: 1;
+  padding: 40px;
+}
+
+.login-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-form .form-control {
+  border-radius: 6px;
+}
+
+.login-form .btn {
+  background-color: #003366;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.login-form .btn:hover {
+  background-color: #002244;
+}
