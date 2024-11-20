@@ -22,6 +22,7 @@ import Footer from './layouts/footer';
 import AboutUsPage from './pages/about/aboutUsPage';
 import ContactPage from './pages/contact/contactPage';
 import ProfilePage from './pages/profile/profilePage';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -103,6 +104,7 @@ function App() {
   };
 
   return (
+    <UserProvider>
     <BrowserRouter>
       <MainLayout user={user} cart={cart} onLogout={handleLogout}>
         <Routes>
@@ -134,6 +136,7 @@ function App() {
         </Routes>
       </MainLayout>
     </BrowserRouter>
+    </UserProvider>
   );
 }
 

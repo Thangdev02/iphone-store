@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import '../auth/loginPage.css'; // Adjust this path as needed
 import { ApiUrl } from '../../config';
 import AppleStore from '../../assets/images/appleStore.jpg';
+import { useUser } from '../../context/UserContext';
 const styles = {
   page: {
     backgroundImage: `url(${AppleStore})`, 
@@ -58,7 +59,7 @@ const styles = {
 
 
 const LoginPage = ({ onLogin }) => {
- 
+  const { login } = useUser();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -68,18 +69,21 @@ const LoginPage = ({ onLogin }) => {
     e.preventDefault();
     try {
       const response = await axios.get(`${ApiUrl}/users`, {
-        params: { username, password },
+        params: { username, password }, // Filters users with matching username and password
       });
-      const user = response.data;
   
-      if (user) {
-        localStorage.setItem('user', JSON.stringify(user));
-        onLogin(user);
+      const users = response.data; // `response.data` is an array of users
+      if (users.length > 0) {
+        const user = users[0]; // Select the first matched user
+        login(user); // Save user data in the context
+        
+        // Navigate based on user role
         navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {
-        setError('Invalid username or password');
+        setError('Invalid username or password'); // Show error if no matching user is found
       }
     } catch (err) {
+      console.error('Error during login:', err);
       setError('Error logging in');
     }
   };

@@ -28,9 +28,9 @@ const ProductDetailPage = ({ addToCart }) => {
   };
 
   useEffect(() => {
-    // Fetch product details
+    // Fetch product details by ID
     axios
-      .get(`${ApiUrl}/products/${id}`)
+      .get(`${ApiUrl}/products/${id}`) // This will match the dynamic route in Vercel
       .then((response) => {
         setProduct(response.data);
         return response.data.brandId;
@@ -43,7 +43,7 @@ const ProductDetailPage = ({ addToCart }) => {
       })
       .catch((error) => console.error("Error fetching product details:", error));
   }, [id]);
-
+  
   useEffect(() => {
     ScrollReveal().reveal(".product-image", {
       duration: 1000,
