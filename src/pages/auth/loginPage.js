@@ -68,35 +68,42 @@ const LoginPage = ({ onLogin }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError(''); // Clear any previous errors
+  
     try {
+      // Send API request to validate username and password
       const response = await axios.get(`${ApiUrl}/users`, {
         params: { username, password },
       });
   
-      const users = response.data;
-  
+      const users = response.data; // Assume response is an array of users
       console.log('Response from API:', users);
   
+      // Check if the user exists in the response
       if (Array.isArray(users) && users.length > 0) {
-        const user = users[0];
+        const user = users[0]; // Extract the first user from the response
   
         if (user && user.role) {
+          // Save user to cookies
           Cookies.set('user', JSON.stringify(user), { expires: 7 });
+  
+          // Call parent onLogin function
           onLogin(user);
   
-          console.log(`User role: ${user.role}, navigating to: ${user.role === 'admin' ? '/dashboard/products' : '/'}`);
+          // Navigate based on the user's role
           navigate(user.role === 'admin' ? '/dashboard/products' : '/');
         } else {
-          setError('Invalid user role');
+          setError('Invalid username or password'); // Handle invalid user
         }
       } else {
-        setError('Invalid username or password');
+        setError('Invalid username or password'); // Handle empty response
       }
     } catch (err) {
       console.error('Error during login:', err);
-      setError('Error logging in. Please try again later.');
+      setError(err.response?.data?.message || 'Error logging in. Please try again later.');
     }
   };
+  
   
   
   return (
