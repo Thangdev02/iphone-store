@@ -126,13 +126,18 @@ function App() {
              
             </Route>
 
-            {/* Admin-Only Routes */}
-            <Route element={<AdminPrivateRoute />}>
-              <Route path="/dashboard" element={<AdminLayout />}>
+            <Route path="/dashboard" element={<AdminLayout />}>
                 <Route path="products" element={<ProductManagement />} />
                 <Route path="brands" element={<BrandManagement />} />
                 <Route path="orders" element={<OrderManagement />} />
               </Route>
+            {/* Admin-Only Routes */}
+            <Route element={<AdminPrivateRoute />}>
+              {/* <Route path="/dashboard" element={<AdminLayout />}>
+                <Route path="products" element={<ProductManagement />} />
+                <Route path="brands" element={<BrandManagement />} />
+                <Route path="orders" element={<OrderManagement />} />
+              </Route> */}
             </Route>
           </Routes>
         </MainLayout>

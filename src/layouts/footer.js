@@ -64,7 +64,7 @@ const Footer = () => {
               <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Website Templates</a></li>
               <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Bootstrap Templates</a></li>
               <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Siter.io</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Static.app</a></li>
+              <li><a href="/dashboard/products" style={{ textDecoration: "none", color: "#343a40" }}>Static.app</a></li>
             </ul>
           </Col>
         </Row>
