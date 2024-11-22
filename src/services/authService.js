@@ -52,11 +52,13 @@ const AuthService = {
 
 export const registerUser = async (userData) => {
     try {
-      const response = await axios.post(`${ApiUrl}/users`, userData);
-      return response.data; // You can handle the response as needed
+      const response = await axios.post(`${ApiUrl}/register`, userData);  // Use /register for registration
+      return response.data; // Return the response data, which contains the new user info
     } catch (error) {
-      throw error; // You can throw the error and handle it in the component
+      console.error('Registration error:', error);
+      throw error; // You can throw the error to be handled in the component
     }
   };
+  
 
 export default AuthService;
