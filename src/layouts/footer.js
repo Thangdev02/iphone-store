@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube, FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -20,11 +19,11 @@ const Footer = () => {
             <h5 style={{ fontWeight: "bold", marginBottom: "20px" }}>Company</h5>
             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
               <li><a href="/aboutus" style={{ textDecoration: "none", color: "#343a40" }}>About Us</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Contact Us</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Newsletter</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Privacy</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Terms</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Cookies</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Contact Us</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Newsletter</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Privacy</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Terms</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Cookies</a></li>
               <li>Status <span style={{ color: "green", fontWeight: "bold" }}>99.80%</span></li>
             </ul>
           </Col>
@@ -33,12 +32,12 @@ const Footer = () => {
           <Col md={3}>
             <h5 style={{ fontWeight: "bold", marginBottom: "20px" }}>Products</h5>
             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Postcards: Email Builder</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Slides: Website Generator</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Startup: Bootstrap Builder</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Affiliate Program</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Help Articles</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Email Signature Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Postcards: Email Builder</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Slides: Website Generator</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Startup: Bootstrap Builder</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Affiliate Program</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Help Articles</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Email Signature Templates</a></li>
             </ul>
           </Col>
 
@@ -46,12 +45,12 @@ const Footer = () => {
           <Col md={3}>
             <h5 style={{ fontWeight: "bold", marginBottom: "20px" }}>Templates</h5>
             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Gmail Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Outlook Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Mailchimp Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>HubSpot Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Klaviyo Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Email Marketing Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Gmail Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Outlook Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Mailchimp Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>HubSpot Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Klaviyo Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Email Marketing Templates</a></li>
             </ul>
           </Col>
 
@@ -59,11 +58,11 @@ const Footer = () => {
           <Col md={3}>
             <h5 style={{ fontWeight: "bold", marginBottom: "20px" }}>Resources</h5>
             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2" }}>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Designmodo Experts</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Email Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Website Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Bootstrap Templates</a></li>
-              <li><a href="#" style={{ textDecoration: "none", color: "#343a40" }}>Siter.io</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Designmodo Experts</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Email Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Website Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Bootstrap Templates</a></li>
+              <li><a href="/" style={{ textDecoration: "none", color: "#343a40" }}>Siter.io</a></li>
               <li><a href="/dashboard/products" style={{ textDecoration: "none", color: "#343a40" }}>Static.app</a></li>
             </ul>
           </Col>

@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './profilePage.css';
+import AuthService from '../../services/authService';
 
 const ProfilePage = () => {
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ const ProfilePage = () => {
     }, []);
 
     const handleLogout = () => {
+        AuthService.clearUserFromCookies();
         Cookies.remove('user'); // Remove user cookie
         navigate('/login'); // Redirect to login page
     };

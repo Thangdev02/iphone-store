@@ -263,6 +263,15 @@
       "price": 29.15,
       "brandId": "1",
       "discount": 10
+    },
+    {
+      "id": "9367",
+      "productImage": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-1-202404?wid=728&hei=666&fmt=jpeg&qlt=90&.v=1713308651643",
+      "productName": "iPad Pro 11‑inch",
+      "quantity": 12,
+      "description": "Apple Intelligence helps you write, express yourself, and get things done effortlessly while giving you peace of mind with groundbreaking privacy protections.¹\nUltra Retina XDR display² with ProMotion, P3 wide color, and True Tone. Optional nano-texture glass.\nApple M4 chip delivers outrageous performance for pro workflows and all-day battery life³\nPro camera with LiDAR Scanner, and landscape 12MP Ultra Wide front camera with Center Stage\nCompatible with Apple Pencil Pro, Apple Pencil (USB-C), Magic Keyboard for iPad Pro, and Smart Folio⁴",
+      "price": 999,
+      "brandId": "6"
     }
   ],
   "brands": [

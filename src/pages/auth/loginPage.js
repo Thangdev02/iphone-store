@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../auth/loginPage.css'; // Adjust this path as needed
-import { ApiUrl } from '../../config';
 import AppleStore from '../../assets/images/appleStore.jpg';
-import Cookies from 'js-cookie'; // Import thư viện js-cookie
+import AuthService from '../../services/authService';
 
 const styles = {
   page: {
@@ -68,48 +66,32 @@ const LoginPage = ({ onLogin }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(''); // Clear any previous errors
+    setError(''); // Clear previous errors
+  
+    // Validate input fields
+    if (!username || !password) {
+      setError('Please enter both username and password');
+      return;
+    }
   
     try {
-      // Gửi yêu cầu GET đến API để kiểm tra tên người dùng và mật khẩu
-      const response = await axios.get(`${ApiUrl}/users`, {
-        params: { username, password },
-        headers: {
-          'Cache-Control': 'no-cache', // Vô hiệu hóa caching
-          'Pragma': 'no-cache', // Thêm tiêu đề Pragma để hỗ trợ trình duyệt cũ
-          'Expires': '0' // Đặt thời gian hết hạn yêu cầu về 0
-        }
-      });
+      // Attempt to log in using AuthService
+      const user = await AuthService.login(username.trim(), password.trim());
   
-      const users = response.data; // Dữ liệu trả về là danh sách người dùng
-      console.log('Response from API:', users);
-  
-      if (Array.isArray(users) && users.length > 0) {
-        const user = users[0]; // Chọn người dùng đầu tiên trong danh sách
-  
-        if (user && user.role) {
-          // Lưu người dùng vào cookies
-          Cookies.set('user', JSON.stringify(user), { expires: 7 });
-  
-          // Gọi hàm onLogin của parent
-          onLogin(user);
-  
-          // Điều hướng theo vai trò của người dùng
-          navigate(user.role === 'admin' ? '/dashboard/products' : '/');
-        } else {
-          setError('Invalid username or password'); // Xử lý nếu không có vai trò người dùng
-        }
+      // If login is successful
+      if (user && user.role) {
+        AuthService.setUserInCookies(user);  // Save user in cookies
+        onLogin(user);  // Pass the user to the parent component
+    
+        // Redirect based on user role
+        navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {
-        setError('Invalid username or password'); // Xử lý nếu không tìm thấy người dùng
+        setError('Invalid username or password');
       }
     } catch (err) {
-      console.error('Error during login:', err);
-      setError(err.response?.data?.message || 'Error logging in. Please try again later.');
+      setError(err.message || 'Error logging in. Please try again.');
     }
   };
-  
-
-  
   
   return (
     <div className="login-page" style={styles.page}>

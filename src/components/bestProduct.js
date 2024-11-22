@@ -30,7 +30,7 @@ const BestProduct = (props) => {
     }, []);
     return (
         <div style={{ width: '80%', height: '30vh',fontFamily: 'sans-serif',display: 'flex', justifyContent: 'space-around', alignItems: 'center',backgroundColor: '#f7f7f7', padding:'2% 3 %', borderRadius: '8px' ,boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.2)'}}>
-        <div className='right-content text-center md:text-left flex-col md:flex-col ' style={{width:'30%',marginLeft:'6%'}}>
+        <div className='right-content text-center md:text-left flex-col md:flex-col ' style={{marginLeft:'6%'}}>
             <p style={{ fontSize: '1.5rem', fontWeight: 'bold'}}>
               {props.productName}
             </p>

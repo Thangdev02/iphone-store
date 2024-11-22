@@ -117,27 +117,26 @@ function App() {
               <Route path="/shop" element={<StorePage addToCart={addToCart} />} />
               <Route path="/product/:id" element={<ProductDetailPage addToCart={addToCart} />} />
               <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
-              <Route path="/checkout" element={<CheckoutPage cart={cart} placeOrder={placeOrder} />} />
-              <Route path="/history" element={<OrderHistoryPage user={user} />} />
               <Route path="/aboutus" element={<AboutUsPage user={user} />} />
               <Route path="/contact" element={<ContactPage user={user} />} />
             {/* User-Only Routes */}
             <Route element={<UserPrivateRoute />}>
-             
+            <Route path="/checkout" element={<CheckoutPage cart={cart} placeOrder={placeOrder} />} />
+            <Route path="/history" element={<OrderHistoryPage user={user} />} />
             </Route>
 
-            <Route path="/dashboard" element={<AdminLayout />}>
-                <Route path="products" element={<ProductManagement />} />
-                <Route path="brands" element={<BrandManagement />} />
-                <Route path="orders" element={<OrderManagement />} />
-              </Route>
-            {/* Admin-Only Routes */}
-            <Route element={<AdminPrivateRoute />}>
-              {/* <Route path="/dashboard" element={<AdminLayout />}>
+            {/* <Route path="/dashboard" element={<AdminLayout />}>
                 <Route path="products" element={<ProductManagement />} />
                 <Route path="brands" element={<BrandManagement />} />
                 <Route path="orders" element={<OrderManagement />} />
               </Route> */}
+            {/* Admin-Only Routes */}
+            <Route element={<AdminPrivateRoute />}>
+              <Route path="/dashboard" element={<AdminLayout />}>
+                <Route path="products" element={<ProductManagement />} />
+                <Route path="brands" element={<BrandManagement />} />
+                <Route path="orders" element={<OrderManagement />} />
+              </Route>
             </Route>
           </Routes>
         </MainLayout>
