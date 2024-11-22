@@ -24,7 +24,7 @@ const AuthService = {
             const user = response.data; // In this case, expect a single object or array of users
             console.log('users:', user);
             if (user && user.username === username.trim() && user.password === password.trim()) {
-                console.log('Login successful:', users);
+                console.log('Login successful:', user);
                 return user; // Return the user object if matched
             }
     
