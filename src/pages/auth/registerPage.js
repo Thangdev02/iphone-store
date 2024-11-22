@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { ApiUrl } from '../../config';
+import { ApiUrl } from '../../config'; // Update this import with your actual API URL
 import AppleStore from '../../assets/images/appleStore.jpg';
 import '../auth/registerPage.css'; // Adjust this path as needed
-
 
 const styles = {
   page: {
@@ -56,7 +55,6 @@ const styles = {
   },
 };
 
-
 const RegisterPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -88,9 +86,18 @@ const RegisterPage = () => {
         address,
         role: 'user', // Automatically set the role to "user"
       };
-      await axios.post(`${ApiUrl}/users`, newUser);
-      alert('Registration successful! Please log in.');
-      navigate('/login');
+
+      // Send POST request to the server
+      const response = await axios.post(`${ApiUrl}/users`, newUser, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.status === 201) {
+        alert('Registration successful! Please log in.');
+        navigate('/login');
+      }
     } catch (err) {
       setError('Error registering. Please try again.');
       console.error('Registration error:', err);
