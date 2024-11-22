@@ -1,3 +1,4 @@
+import path from 'path';
 import fs from 'fs/promises';
 
 export default async function handler(req, res) {
@@ -9,28 +10,25 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Read data asynchronously from the JSON file
+      // Read data from the JSON file
       const dataPath = path.join(process.cwd(), 'database.json');
       const data = JSON.parse(await fs.readFile(dataPath, 'utf-8'));
 
-      const user = data.users.find(
-        (user) =>
-          user.username.trim().toLowerCase() === username.trim().toLowerCase() &&
-          user.password === password
-      );
+      // Find user in the JSON file
+      const user = data.users.find(user => user.username === username && user.password === password);
 
       if (user) {
+        // Exclude password from the response
         const { password, ...userWithoutPassword } = user;
-        res.status(200).json(userWithoutPassword);
+        return res.status(200).json([userWithoutPassword]);  // Return user inside an array to match frontend expectations
       } else {
-        res.status(404).json({ message: 'Invalid username or password' });
+        return res.status(404).json({ message: 'Invalid username or password' });
       }
-
     } catch (error) {
       console.error('Error reading the database file:', error);
-      res.status(500).json({ message: 'Internal server error' });
+      return res.status(500).json({ message: 'Internal server error' });
     }
   } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+    return res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
