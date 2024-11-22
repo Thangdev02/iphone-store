@@ -35,19 +35,20 @@ export default function handler(req, res) {
       const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
       // Find user with matching username and password
+      // Check password as well
       const user = data.users.find(
         (user) =>
           user.username.trim().toLowerCase() === username.trim().toLowerCase() &&
-          user.password === password
+          user.password === password  // Ensure password matches
       );
 
       if (user) {
-        // Exclude sensitive data like passwords in the response
-        const { password, ...userWithoutPassword } = user;
+        const { password, ...userWithoutPassword } = user;  // Exclude password from response
         res.status(200).json(userWithoutPassword);
       } else {
-        res.status(404).json({ message: 'User not found' });
+        res.status(404).json({ message: 'Invalid username or password' });
       }
+
     } catch (error) {
       console.error('Error reading the database file:', error);
       res.status(500).json({ message: 'Internal server error' });
