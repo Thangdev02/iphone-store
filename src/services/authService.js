@@ -21,9 +21,11 @@ const AuthService = {
             });
             console.log('API response:', response.data); // Debug output
     
-            const users = response.data; // In this case, expect a single object or array of users
-            if (users && users.username && users.password === password) {
-                return users; // Return the user object if matched
+            const user = response.data; // In this case, expect a single object or array of users
+            console.log('users:', user);
+            if (user && user.username === username.trim() && user.password === password.trim()) {
+                console.log('Login successful:', users);
+                return user; // Return the user object if matched
             }
     
             throw new Error('Invalid username or password');

@@ -86,10 +86,10 @@ const LoginPage = ({ onLogin }) => {
         // Redirect based on user role
         navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {
-        setError('Invalid username or password');
+        setError('ko biet bi gi');
       }
     } catch (err) {
-      setError(err.message || 'Error logging in. Please try again.');
+      setError(err.message || 'Error logging in. Please try again.....');
     }
   };
   
