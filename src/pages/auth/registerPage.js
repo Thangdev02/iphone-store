@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { ApiUrl } from '../../config'; // Update this import with your actual API URL
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import { registerUser } from '../../services/authService'; // Import the authService
 import AppleStore from '../../assets/images/appleStore.jpg';
-import '../auth/registerPage.css'; // Adjust this path as needed
+import '../auth/registerPage.css';
 
 const styles = {
   page: {
@@ -19,8 +18,8 @@ const styles = {
   box: {
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: 'rgba(255, 255, 255, 0.7)', // Semi-transparent white
-    backdropFilter: 'blur(10px)', // Blur effect for the frosted-glass look
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    backdropFilter: 'blur(10px)',
     width: '70%',
     maxWidth: '900px',
     borderRadius: '12px',
@@ -50,8 +49,8 @@ const styles = {
   formContainer: {
     flex: 1,
     padding: '40px',
-    overflowY: 'auto',  // Enable scrolling when necessary
-    maxHeight: '80vh',  // Limit height to 80% of the viewport height
+    overflowY: 'auto',
+    maxHeight: '80vh',
   },
 };
 
@@ -75,29 +74,21 @@ const RegisterPage = () => {
       return;
     }
 
+    const newUser = {
+      username,
+      password,
+      email,
+      phone,
+      dob,
+      gender,
+      address,
+      role: 'user',
+    };
+
     try {
-      const newUser = {
-        username,
-        password,
-        email,
-        phone,
-        dob,
-        gender,
-        address,
-        role: 'user', // Automatically set the role to "user"
-      };
-
-      // Send POST request to the server
-      const response = await axios.post(`${ApiUrl}/users`, newUser, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (response.status === 201) {
-        alert('Registration successful! Please log in.');
-        navigate('/login');
-      }
+      await registerUser(newUser);  // Call the registerUser function from authService
+      alert('Registration successful! Please log in.');
+      navigate('/login');
     } catch (err) {
       setError('Error registering. Please try again.');
       console.error('Registration error:', err);

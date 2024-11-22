@@ -50,4 +50,13 @@ const AuthService = {
   },
 };
 
+export const registerUser = async (userData) => {
+    try {
+      const response = await axios.post(`${ApiUrl}/api/users`, userData);
+      return response.data; // You can handle the response as needed
+    } catch (error) {
+      throw error; // You can throw the error and handle it in the component
+    }
+  };
+  
 export default AuthService;
