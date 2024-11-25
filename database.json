@@ -410,6 +410,17 @@
       "gender": "male",
       "address": "Rach Gia",
       "role": "user"
+    },
+    {
+      "id": "2dac",
+      "username": "asdasda",
+      "password": "123456",
+      "email": "thangdev02@gmail.com",
+      "phone": "09123123123",
+      "dob": "2024-11-14",
+      "gender": "male",
+      "address": "HCM",
+      "role": "user"
     }
   ],
   "cart": [
