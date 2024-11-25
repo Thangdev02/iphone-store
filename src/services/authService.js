@@ -51,14 +51,29 @@ const AuthService = {
 };
 
 export const registerUser = async (userData) => {
-    try {
-      const response = await axios.post(`${ApiUrl}/users`, userData);  // Use /register for registration
-      return response.data; // Return the response data, which contains the new user info
-    } catch (error) {
-      console.error('Registration error:', error);
-      throw error; // You can throw the error to be handled in the component
-    }
-  };
+  try {
+    const { username, password, email, phone, dob, gender, address, role } = userData;
+
+    const response = await axios.post(`${ApiUrl}/users`, null, {
+      params: { // Send data as query parameters
+        username,
+        password,
+        email,
+        phone,
+        dob,
+        gender,
+        address,
+        role: role || 'user', // Default role to 'user'
+      },
+    });
+
+    return response.data; // Return the response data, which contains the new user info
+  } catch (error) {
+    console.error('Registration error:', error);
+    throw error;
+  }
+};
+
   
 
 export default AuthService;
