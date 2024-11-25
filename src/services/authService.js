@@ -52,27 +52,16 @@ const AuthService = {
 
 export const registerUser = async (userData) => {
   try {
-    const { username, password, email, phone, dob, gender, address, role } = userData;
-
-    const response = await axios.post(`${ApiUrl}/users`, null, {
-      params: { // Send data as query parameters
-        username,
-        password,
-        email,
-        phone,
-        dob,
-        gender,
-        address,
-        role: role || 'user', // Default role to 'user'
-      },
+    const response = await axios.post(`${ApiUrl}/users`, userData, {
+      headers: { 'Content-Type': 'application/json' },
     });
-
-    return response.data; // Return the response data, which contains the new user info
+    return response.data;
   } catch (error) {
-    console.error('Registration error:', error);
+    console.error('Registration error:', error.response?.data || error.message);
     throw error;
   }
 };
+
 
   
 
