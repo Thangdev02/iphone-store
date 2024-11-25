@@ -399,6 +399,17 @@
       "gender": "male",
       "address": "123 Main St, Springfield, IL",
       "role": "user"
+    },
+    {
+      "id": "430f",
+      "username": "steve",
+      "password": "123456",
+      "email": "thangdev02@gmail.com",
+      "phone": "09123123123",
+      "dob": "2024-11-01",
+      "gender": "male",
+      "address": "Rach Gia",
+      "role": "user"
     }
   ],
   "cart": [
