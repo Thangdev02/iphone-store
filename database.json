@@ -388,6 +388,17 @@
       "gender": "male",
       "address": "HCM",
       "role": "user"
+    },
+    {
+      "id": "68f3",
+      "username": "john_doee",
+      "password": "securepassword123",
+      "email": "john.doe@example.com",
+      "phone": "+1234567890",
+      "dob": "1990-05-12",
+      "gender": "male",
+      "address": "123 Main St, Springfield, IL",
+      "role": "user"
     }
   ],
   "cart": [

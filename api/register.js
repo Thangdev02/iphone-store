@@ -10,18 +10,21 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Read data from the JSON file
       const dataPath = path.join(process.cwd(), 'database.json');
-      const data = JSON.parse(await fs.readFile(dataPath, 'utf-8'));
+      console.log('Database Path:', dataPath);
 
-      // Check if the username already exists
+      // In production, mock the database or use a real DB
+      if (process.env.NODE_ENV === 'production') {
+        return res.status(501).json({ message: 'Database writing is disabled in production' });
+      }
+
+      const data = JSON.parse(await fs.readFile(dataPath, 'utf-8'));
       const userExists = data.users.find(user => user.username === username);
 
       if (userExists) {
         return res.status(409).json({ message: 'Username already exists' });
       }
 
-      // Add new user to the list
       const newUser = {
         username,
         password,
@@ -30,19 +33,16 @@ export default async function handler(req, res) {
         dob,
         gender,
         address,
-        role: role || 'user',  // Default to 'user' if no role is provided
+        role: role || 'user',
       };
 
       data.users.push(newUser);
-
-      // Save updated data back to the JSON file
       await fs.writeFile(dataPath, JSON.stringify(data, null, 2));
 
-      // Return a success message with the new user data (excluding the password)
       const { password: _, ...userWithoutPassword } = newUser;
       return res.status(201).json(userWithoutPassword);
     } catch (error) {
-      console.error('Error reading or writing the database file:', error);
+      console.error('Error in API:', error.stack || error);
       return res.status(500).json({ message: 'Internal server error' });
     }
   } else {
