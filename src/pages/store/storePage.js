@@ -188,7 +188,8 @@ const StorePage = ({ addToCart }) => {
             <div key={brand.brandId} className="brand-section">
               <h4 className="brand-title">{brand.brandName}</h4>
               <Row className="product-grid">
-                {paginatedProducts.map((product) => (
+                { paginatedProducts.length > 0 ?
+                paginatedProducts.map((product) => (
                   <Col xs={6} sm={6} md={3} key={product.id} className="mb-4">
                     <Card className="product-card" style={{border: 'none',boxShadow: 'none'}}>
                       <div className="card-content">
@@ -224,7 +225,11 @@ const StorePage = ({ addToCart }) => {
                       </Button>
                     </Card>
                   </Col>
-                ))}
+                )):
+                <div className="text-center mt-5">
+                  <p>No products found for this category.</p>
+                </div>
+                }
               </Row>
 
               {/* Dot Pagination */}

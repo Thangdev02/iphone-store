@@ -1,13 +1,11 @@
 import React from 'react';
-import { Navbar, Nav, Container, Form, FormControl, Button, Badge } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form, FormControl, Button, Badge,Dropdown } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaApple } from "react-icons/fa";
 import './header.css';
 
 const Header = ({ user, onLogout, cart }) => {
   const navigate = useNavigate();
-
-  
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -25,6 +23,34 @@ const Header = ({ user, onLogout, cart }) => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/shop">Store</Nav.Link>
+            {/* <Nav.Link as={Link} to="/news">News</Nav.Link> */}
+            <Dropdown as={Nav.Item} className="position-relative">
+              <Dropdown.Toggle
+                as={Nav.Link}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                id="news-dropdown"
+              >
+                News
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/news/airpod">
+                  Airpod
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/news/imac">
+                  iMac
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/news/iphone">
+                  iPhone
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/news/ipad">
+                  iPad
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Nav.Link as={Link} to="/aboutus">About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>

@@ -79,7 +79,7 @@ const LoginPage = ({ onLogin }) => {
         // Save user details in cookies and call onLogin callback
         AuthService.setUserInCookies(user);
         onLogin(user);
-
+        console.log('User logged in:', user);
         // Redirect based on user role
         navigate(user.role === 'admin' ? '/dashboard/products' : '/');
       } else {

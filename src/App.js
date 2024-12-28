@@ -24,6 +24,8 @@ import ContactPage from './pages/contact/contactPage';
 import ProfilePage from './pages/profile/profilePage';
 import { UserProvider } from './context/UserContext';
 import Cookies from 'js-cookie';
+import NewsPage from './pages/news/newPage';
+import NewsImacPage from './pages/news/newsImacPage';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -123,6 +125,8 @@ function App() {
             <Route element={<UserPrivateRoute />}>
             <Route path="/checkout" element={<CheckoutPage cart={cart} placeOrder={placeOrder} />} />
             <Route path="/history" element={<OrderHistoryPage user={user} />} />
+            <Route path="/news/airpod" element={<NewsPage user={user} />} />
+            <Route path="/news/imac" element={<NewsImacPage user={user} />} />
             </Route>
 
             {/* <Route path="/dashboard" element={<AdminLayout />}>

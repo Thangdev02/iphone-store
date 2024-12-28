@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './checkoutPage.css'; // Assume this CSS file has custom styles for checkout
+import Cookies from 'js-cookie';
 
 const CheckoutPage = ({ cart, placeOrder }) => {
   const [billingInfo, setBillingInfo] = useState({
-    fullName: '',
+    username: '',
     address: '',
     phone: '',
   });
@@ -14,15 +15,32 @@ const CheckoutPage = ({ cart, placeOrder }) => {
 
   useEffect(() => {
     // Load user data from localStorage if available
-    const user = JSON.parse(localStorage.getItem('user'))[0]; // Retrieve the first user object
-    if (user) {
-      setBillingInfo({
-        fullName: user.username || '', // Pre-fill with the user's username
-        address: user.address || '', // Pre-fill with the user's address
-        phone: user.phone || '', // Pre-fill with the user's phone number
-      });
-    }
-  }, []);
+    
+  //   const storedUser = localStorage.getItem('user');
+  //   if (storedUser) {
+  //     const user = JSON.parse(storedUser)[0]; // Ensure data is parsed and not null
+  //     if (user) {
+  //       setBillingInfo({
+  //         fullName: user.username || '', // Pre-fill with the user's username
+  //         address: user.address || '', // Pre-fill with the user's address
+  //         phone: user.phone || '', // Pre-fill with the user's phone number
+  //       });
+  //     }
+  //   }
+  // }, []);
+  const userCookie = Cookies.get('user'); // 'user' là tên cookie bạn lưu
+  if (userCookie) {
+    // Parse cookie từ JSON thành object
+    const userData = JSON.parse(decodeURIComponent(userCookie));
+    // Cập nhật state với dữ liệu từ cookie
+    setBillingInfo({
+      username: userData.username || '',
+      address: userData.address || '',
+      phone: userData.phone || '',
+    });
+  }
+}, []);
+  
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +51,8 @@ const CheckoutPage = ({ cart, placeOrder }) => {
     e.preventDefault();
     placeOrder(billingInfo); // Use the billing information to place the order
     navigate('/history'); // Redirect to order history
+    window.location.reload();
+
   };
 
   const totalAmount = cart.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -44,12 +64,12 @@ const CheckoutPage = ({ cart, placeOrder }) => {
           <Card className="p-4 shadow-sm">
             <h2 className="checkout-title">Checkout</h2>
             <Form onSubmit={handlePlaceOrder}>
-              <Form.Group controlId="fullName" className="mb-3">
+              <Form.Group controlId="username" className="mb-3">
                 <Form.Label>Full Name</Form.Label>
                 <Form.Control
                   type="text"
-                  name="fullName"
-                  value={billingInfo.fullName}
+                  name="username"
+                  value={billingInfo.username}
                   onChange={handleInputChange}
                   required
                   placeholder="Enter your full name"
